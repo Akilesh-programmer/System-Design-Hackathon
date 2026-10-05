@@ -1,0 +1,38 @@
+{
+  "name": "flash-sale-concurrency-prototype",
+  "version": "1.0.0",
+  "description": "High-concurrency flash sale inventory reservation prototype with Redis Lua, Postgres, and Idempotency",
+  "scripts": {
+    "build": "nest build",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:prod": "node dist/main",
+    "load-test": "ts-node scripts/load-test.ts",
+    "load-test:fast": "node -r ts-node/register scripts/load-test.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.3.7",
+    "@nestjs/core": "^10.3.7",
+    "@nestjs/platform-express": "^10.3.7",
+    "@nestjs/schedule": "^4.0.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "dotenv": "^16.4.5",
+    "ioredis": "^5.4.1",
+    "pg": "^8.11.5",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.3.2",
+    "@nestjs/schematics": "^10.1.1",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
+    "@types/pg": "^8.11.5",
+    "@types/uuid": "^9.0.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "undici": "^6.13.0"
+  }
+}
